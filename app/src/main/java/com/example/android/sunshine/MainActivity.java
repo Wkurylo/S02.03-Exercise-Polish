@@ -71,27 +71,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // COMPLETED (8) Create a method called showWeatherDataView that will hide the error message and show the weather data
-    private void showWeatherDataView()
-    {
-        if(mErrorTextView.getVisibility() == View.VISIBLE)
-        {
+    private void showWeatherDataView() {
+        if (mErrorTextView.getVisibility() == View.VISIBLE) {
             mErrorTextView.setVisibility(View.INVISIBLE);
         }
-        if(mWeatherTextView.getVisibility() == View.INVISIBLE)
-        {
+        if (mWeatherTextView.getVisibility() == View.INVISIBLE) {
             mWeatherTextView.setVisibility(View.VISIBLE);
         }
     }
 
     // COMPLETED (9) Create a method called showErrorMessage that will hide the weather data and show the error message
-    private void showErrorMessage()
-    {
-        if(mWeatherTextView.getVisibility() == View.VISIBLE)
-        {
+    private void showErrorMessage() {
+        if (mWeatherTextView.getVisibility() == View.VISIBLE) {
             mWeatherTextView.setVisibility(View.INVISIBLE);
         }
-        if(mErrorTextView.getVisibility() == View.INVISIBLE)
-        {
+        if (mErrorTextView.getVisibility() == View.INVISIBLE) {
             mErrorTextView.setVisibility(View.VISIBLE);
         }
     }
@@ -103,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            if(mProgressBar.getVisibility() == View.INVISIBLE) {
+            if (mProgressBar.getVisibility() == View.INVISIBLE) {
                 mProgressBar.setVisibility(View.VISIBLE);
             }
         }
@@ -137,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String[] weatherData) {
             // COMPLETED (19) As soon as the data is finished loading, hide the loading indicator
-            if(mProgressBar.getVisibility() == View.VISIBLE) {
+            if (mProgressBar.getVisibility() == View.VISIBLE) {
                 mProgressBar.setVisibility(View.INVISIBLE);
             }
 
